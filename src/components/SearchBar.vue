@@ -1,11 +1,16 @@
 <template>
 	<div>
-		<input type="text" />
+		<input @input="onInput" type="text" />
 	</div>
 </template>
 
 <script>
 export default {
-	name: "SearchBar"
+	name: "SearchBar",
+	methods: {
+		onInput: function(event) {
+			console.log(event.target.value);
+		}
+	}
 };
 </script>
