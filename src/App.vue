@@ -1,19 +1,22 @@
 <template>
 	<div>
 		<SearchBar @termChange="onTermChange"></SearchBar>
+		<VideoList></VideoList>
 	</div>
 </template>
 
 <script>
 import axios from "axios";
 import SearchBar from "./components/SearchBar";
+import VideoList from "./components/VideoList";
 
 const API_KEY = "AIzaSyDOthGbDGslko3tMBzCmm1aoy8Sfd3_Azg";
 
 export default {
 	name: "App",
 	components: {
-		SearchBar
+		SearchBar,
+		VideoList
 	},
 	methods: {
 		onTermChange: function(searchTerm) {
