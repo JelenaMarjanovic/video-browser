@@ -18,6 +18,11 @@ export default {
 		SearchBar,
 		VideoList
 	},
+	data() {
+		return {
+			videos: []
+		};
+	},
 	methods: {
 		onTermChange: function(searchTerm) {
 			axios
@@ -29,7 +34,7 @@ export default {
 						q: searchTerm
 					}
 				})
-				.then(response => console.log(response));
+				.then(response => (this.videos = response.data.items));
 		}
 	}
 };
