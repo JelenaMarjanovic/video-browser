@@ -14,3 +14,14 @@ export default {
 	}
 };
 </script>
+
+<style scoped>
+div {
+	margin: 20px;
+	text-align: center;
+}
+
+input {
+	width: 75%;
+}
+</style>
