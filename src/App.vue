@@ -40,7 +40,10 @@ export default {
 						q: searchTerm
 					}
 				})
-				.then(response => (this.videos = response.data.items));
+				.then(response => {
+					this.videos = response.data.items;
+					this.selectedVideo = response.data.items[0];
+				});
 		},
 		onVideoSelect(video) {
 			this.selectedVideo = video;
